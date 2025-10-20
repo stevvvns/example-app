@@ -12,7 +12,7 @@
   "description": "",
   "dependencies": {
     "@stevvvns/incomponent": "^0.0.15",
-    "@stevvvns/koa-wsapi": "^0.0.8",
+    "@stevvvns/koa-wsapi": "^0.0.9",
     "tweetnacl": "^1.0.3"
   }
 }
