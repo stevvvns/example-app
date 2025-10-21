@@ -7,7 +7,6 @@ comp(function Compose() {
       const ta = this.shadowRoot.querySelector('textarea');
       await messages.post(ta.value);
       ta.value = '';
-      messages.refetch();
     },
   };
 })

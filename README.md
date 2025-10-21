@@ -17,6 +17,8 @@ Just to document how the libraries work, and prove to myself that they do work t
 
 ## How?
 
+You need to have Redis running.
+
 Clone this and `$ npm start` to run the app, for whatever good that does.
 
 ![screenshot showing a primitive message board type app](screenshot.png "waou")

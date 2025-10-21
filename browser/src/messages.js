@@ -3,14 +3,19 @@ import api from './api.js';
 
 const messages = (() => {
   const data = ref([]);
-  async function refetch() {
-    data.value = (await api.getMessages()).messages;
-  }
+  (async () => {
+    console.log('call sub');
+    const [current] = api.messageUpdates.subscribe({}, (newMsg) => {
+      data.mut((draft) => {
+        draft.push(newMsg);
+      });
+    });
+    data.value = (await current).messages;
+  })();
   function post(body) {
     return api.postMessage({ body });
   }
-  refetch();
-  return { data, refetch, post };
+  return { data, post };
 })();
 
 export default messages;
