@@ -10,7 +10,7 @@
   "license": "MIT",
   "description": "",
   "dependencies": {
-    "@stevvvns/koa-wsapi": "^0.0.11",
+    "@stevvvns/koa-wsapi": "^0.0.12",
     "koa": "^3.0.3",
     "koa-helmet": "^8.0.1",
     "koa-static": "^5.0.0"

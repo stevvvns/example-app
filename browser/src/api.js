@@ -1,17 +1,5 @@
-import start from '@stevvvns/koa-wsapi/dist/client/index.js';
+import start, { toB64, toU8 } from '@stevvvns/koa-wsapi/dist/client/index.js';
 import { sign } from 'tweetnacl';
-
-function toB64(u8) {
-  return btoa(u8.reduce((data, byte) => data + String.fromCharCode(byte), ''));
-}
-
-function toU8(b64) {
-  return new Uint8Array(
-    atob(b64)
-      .split('')
-      .map((ch) => ch.charCodeAt(0)),
-  );
-}
 
 let keys;
 try {
